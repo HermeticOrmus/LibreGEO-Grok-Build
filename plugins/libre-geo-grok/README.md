@@ -12,7 +12,7 @@ The Grok-native layer of [LibreGEO-Grok-Build](https://github.com/HermeticOrmus/
 
 ```bash
 grok plugin marketplace add HermeticOrmus/LibreGEO-Grok-Build
-grok plugin install libre-geo-grok@libre-geo-grok
+grok plugin install libre-geo-grok@LibreGEO-Grok-Build
 ```
 
 The same marketplace offers the whole LibreGEO-Claude-Code pack as one plugin, `libre-geo`, pinned by commit.

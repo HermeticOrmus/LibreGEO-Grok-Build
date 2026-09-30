@@ -37,9 +37,11 @@ One marketplace brings the Grok-native plugin and the pack's `libre-geo` plugin,
 
 ```bash
 grok plugin marketplace add HermeticOrmus/LibreGEO-Grok-Build
-grok plugin install libre-geo-grok@libre-geo-grok
-grok plugin install libre-geo@libre-geo-grok
+grok plugin install libre-geo-grok@LibreGEO-Grok-Build
+grok plugin install libre-geo@LibreGEO-Grok-Build
 ```
+
+Grok registers a marketplace added from GitHub under the repo's name, so the part after `@` is `LibreGEO-Grok-Build`, not the manifest name `libre-geo-grok`. A bare plugin name also works when no other marketplace you added has a plugin by that name.
 
 Confirm what landed:
 

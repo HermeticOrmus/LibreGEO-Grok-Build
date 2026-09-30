@@ -5,7 +5,7 @@ description: "Stub cue, not installed. Honest freshness signals for GEO content 
 
 # Content Freshness
 
-> Stub, not installed by the plugin. The real depth is the [`geo-content`](https://github.com/HermeticOrmus/LibreGEO-Claude-Code/tree/main/skills/geo-content) skill of the `libre-geo` plugin (LibreGEO-Claude-Code), which this edition's marketplace installs: `grok plugin install libre-geo@libre-geo-grok`.
+> Stub, not installed by the plugin. The real depth is the [`geo-content`](https://github.com/HermeticOrmus/LibreGEO-Claude-Code/tree/main/skills/geo-content) skill of the `libre-geo` plugin (LibreGEO-Claude-Code), which this edition's marketplace installs: `grok plugin install libre-geo@LibreGEO-Grok-Build`.
 
 Refresh without fake dates.
 
