@@ -32,9 +32,9 @@ See [QUICK_START.md](./QUICK_START.md) for the marketplace, dogfood, and copy pa
 
 ```bash
 grok plugin marketplace add HermeticOrmus/LibreGEO-Grok-Build
-grok plugin install libre-geo-grok@libre-geo-grok
+grok plugin install libre-geo-grok@LibreGEO-Grok-Build
 # The whole LibreGEO-Claude-Code pack, one plugin, pinned by commit:
-grok plugin install libre-geo@libre-geo-grok
+grok plugin install libre-geo@LibreGEO-Grok-Build
 grok plugin list
 ```
 

@@ -5,7 +5,7 @@ description: "Stub cue, not installed. Structure content for answer extraction w
 
 # Answer Engine Optimize
 
-> Stub, not installed by the plugin. The real depth is the [`geo-platform-optimizer`](https://github.com/HermeticOrmus/LibreGEO-Claude-Code/tree/main/skills/geo-platform-optimizer) skill of the `libre-geo` plugin (LibreGEO-Claude-Code), which this edition's marketplace installs: `grok plugin install libre-geo@libre-geo-grok`.
+> Stub, not installed by the plugin. The real depth is the [`geo-platform-optimizer`](https://github.com/HermeticOrmus/LibreGEO-Claude-Code/tree/main/skills/geo-platform-optimizer) skill of the `libre-geo` plugin (LibreGEO-Claude-Code), which this edition's marketplace installs: `grok plugin install libre-geo@LibreGEO-Grok-Build`.
 
 Structure for extraction, not keyword abuse.
 

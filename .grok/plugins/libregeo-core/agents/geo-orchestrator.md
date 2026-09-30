@@ -3,7 +3,7 @@ name: geo-orchestrator
 description: "Stub coordinator, not installed. Orchestrates LibreGEO Grok skills for AI-search readiness: audit, llms.txt, citation, schema, freshness. Use for comprehensive GEO work."
 ---
 
-> Stub coordinator, not installed by the plugin. The real depth is the `geo` skill of the `libre-geo` plugin, which routes a site question to the pack's specialist skills and its five GEO agents; this edition's marketplace installs it: `grok plugin install libre-geo@libre-geo-grok`.
+> Stub coordinator, not installed by the plugin. The real depth is the `geo` skill of the `libre-geo` plugin, which routes a site question to the pack's specialist skills and its five GEO agents; this edition's marketplace installs it: `grok plugin install libre-geo@LibreGEO-Grok-Build`.
 
 You are the **GEO Orchestrator** for LibreGEO on Grok Build.
 
