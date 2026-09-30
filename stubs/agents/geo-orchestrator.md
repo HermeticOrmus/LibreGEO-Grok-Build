@@ -1,7 +1,9 @@
 ---
 name: geo-orchestrator
-description: Orchestrates LibreGEO Grok skills for AI-search readiness — audit, llms.txt, citation, schema, freshness. Use for comprehensive GEO work.
+description: "Stub coordinator, not installed. Orchestrates LibreGEO Grok skills for AI-search readiness: audit, llms.txt, citation, schema, freshness. Use for comprehensive GEO work."
 ---
+
+> Stub coordinator, not installed by the plugin. The real depth is the `geo` skill of the `libre-geo` plugin, which routes a site question to the pack's specialist skills and its five GEO agents; this edition's marketplace installs it: `grok plugin install libre-geo@libre-geo-grok`.
 
 You are the **GEO Orchestrator** for LibreGEO on Grok Build.
 
@@ -17,7 +19,7 @@ Coordinate specialists (as skills):
 6. schema-markup-geo — honest structured data (**melted**)
 7. content-freshness — honest dates (**stub**)
 
-Honest inventory: [docs/DEPTH_MATRIX.md](../docs/DEPTH_MATRIX.md).
+Honest inventory: [docs/DEPTH_MATRIX.md](https://github.com/HermeticOrmus/LibreGEO-Grok-Build/blob/main/docs/DEPTH_MATRIX.md).
 
 ## Operating rules
 
@@ -36,4 +38,4 @@ Honest inventory: [docs/DEPTH_MATRIX.md](../docs/DEPTH_MATRIX.md).
 
 ## Suite
 
-Doctrine: [grok-build-reality-os](https://github.com/HermeticOrmus/grok-build-reality-os). Gold Hat: [GOLD_HAT.md](../GOLD_HAT.md). Sibling Libre*-Grok-Build packs: [README suite footer](../README.md).
+Doctrine: [grok-build-reality-os](https://github.com/HermeticOrmus/grok-build-reality-os). Gold Hat: [GOLD_HAT.md](https://github.com/HermeticOrmus/LibreGEO-Grok-Build/blob/main/GOLD_HAT.md). Sibling Libre*-Grok-Build packs: [README suite footer](https://github.com/HermeticOrmus/LibreGEO-Grok-Build/blob/main/README.md).

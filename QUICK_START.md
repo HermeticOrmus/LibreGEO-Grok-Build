@@ -6,8 +6,8 @@ Doctrine first: put [grok-build-reality-os](https://github.com/HermeticOrmus/gro
 
 ## Prerequisites
 
-- `git`
-- Grok Build installed and able to see skills under `.grok/skills/` or `~/.grok/skills/`
+- Grok Build installed: `curl -fsSL https://x.ai/cli/install.sh | bash`, then `grok --version`. Plugin commands need no login.
+- `git` (only for the dogfood and copy paths)
 - A site, docs set, or marketing page you own, **or** this repo as the working tree
 
 ## Layout this file assumes
@@ -15,34 +15,64 @@ Doctrine first: put [grok-build-reality-os](https://github.com/HermeticOrmus/gro
 Verified against this repository (do not invent extra folders):
 
 ```
-skills/<name>/SKILL.md          # canonical skill bodies (copy these)
-AGENTS/geo-orchestrator.md
+.grok-plugin/marketplace.json                  # the marketplace: libre-geo-grok, then the pack's plugins by pinned commit
+plugins/libre-geo-grok/.grok-plugin/plugin.json
+plugins/libre-geo-grok/skills/<name>/SKILL.md  # the melted skills (canonical)
+stubs/skills/<name>/SKILL.md                   # stub cues; not installed
+stubs/agents/geo-orchestrator.md               # stub coordinator; not installed
 docs/DEPTH_MATRIX.md
 docs/MELT_RULES.md
-.grok/skills/<name>/SKILL.md    # dogfood copy; must match skills/
-.grok/plugins/libregeo-core/    # plugin stub; not required for first run
+.grok/skills/<name>/SKILL.md                   # dogfood copy; must match its source above
+.grok/plugins/libregeo-core/                   # v0 bundle stub; dogfood copy of the stub orchestrator
 ```
 
-Melted (usable now): `skills/llms-txt/SKILL.md`, `skills/citation-readiness/SKILL.md`, `skills/schema-markup-geo/SKILL.md`.
-Still stubs: `geo-audit`, `ai-search-presence`, `answer-engine-optimize`, `content-freshness`, plus the orchestrator. Honest table: [docs/DEPTH_MATRIX.md](./docs/DEPTH_MATRIX.md).
+Melted (usable now): `plugins/libre-geo-grok/skills/llms-txt/SKILL.md`, `plugins/libre-geo-grok/skills/citation-readiness/SKILL.md`, `plugins/libre-geo-grok/skills/schema-markup-geo/SKILL.md`.
+Still stubs, in `stubs/`: `geo-audit`, `ai-search-presence`, `answer-engine-optimize`, `content-freshness`, plus the orchestrator. Each stub names the pack plugin with the real depth. Honest table: [docs/DEPTH_MATRIX.md](./docs/DEPTH_MATRIX.md).
 
 ## Install (pick one)
 
-### A. Dogfood this repo (fastest)
+### A. Marketplace (recommended)
+
+One marketplace brings the Grok-native plugin and the pack's `libre-geo` plugin, each pinned to a commit:
+
+```bash
+grok plugin marketplace add HermeticOrmus/LibreGEO-Grok-Build
+grok plugin install libre-geo-grok@libre-geo-grok
+grok plugin install libre-geo@libre-geo-grok
+```
+
+Confirm what landed:
+
+```bash
+grok plugin list
+grok plugin details libre-geo-grok
+```
+
+You should see `libre-geo-grok` (three skills: `llms-txt`, `citation-readiness`, `schema-markup-geo`) plus `libre-geo`, the whole LibreGEO-Claude-Code pack.
+
+Only the Grok-native plugin, without the marketplace:
+
+```bash
+grok plugin install HermeticOrmus/LibreGEO-Grok-Build#plugins/libre-geo-grok
+```
+
+Do not install the repo root itself (`grok plugin install HermeticOrmus/LibreGEO-Grok-Build`): since v1.0.0 the root holds no skills, so Grok installs an empty plugin.
+
+### B. Dogfood this repo
 
 ```bash
 git clone https://github.com/HermeticOrmus/LibreGEO-Grok-Build.git
 cd LibreGEO-Grok-Build
-# Skills are already at .grok/skills/ — open this folder in Grok Build.
+# Dogfood copies of the melted skills and the stubs are at .grok/skills/; open this folder in Grok Build.
 ```
 
-### B. Install into your site or docs project
+### C. Install into your site or docs project (copy, no plugin manager)
 
 ```bash
 git clone https://github.com/HermeticOrmus/LibreGEO-Grok-Build.git ~/LibreGEO-Grok-Build
 cd /path/to/your-site-or-docs-project
 mkdir -p .grok/skills
-cp -R ~/LibreGEO-Grok-Build/skills/* .grok/skills/
+cp -R ~/LibreGEO-Grok-Build/plugins/libre-geo-grok/skills/* .grok/skills/
 ```
 
 Confirm the copy landed:
@@ -54,19 +84,19 @@ test -f .grok/skills/schema-markup-geo/SKILL.md
 ls .grok/skills
 ```
 
-You should see seven skill directories, matching `skills/` in this repo.
+You should see three skill directories, matching `plugins/libre-geo-grok/skills/` in this repo. The stubs are not copied: they are cues, not skills.
 
-### C. User-global
+### D. User-global copy
 
 ```bash
 git clone https://github.com/HermeticOrmus/LibreGEO-Grok-Build.git ~/LibreGEO-Grok-Build
 mkdir -p ~/.grok/skills
-cp -R ~/LibreGEO-Grok-Build/skills/* ~/.grok/skills/
+cp -R ~/LibreGEO-Grok-Build/plugins/libre-geo-grok/skills/* ~/.grok/skills/
 ```
 
-Same three `test -f` checks as B, under `~/.grok/skills/`.
+Same three `test -f` checks as C, under `~/.grok/skills/`.
 
-Copy `AGENTS/geo-orchestrator.md` only when you want a multi-skill GEO pass. It is still a stub coordinator.
+Copy `stubs/agents/geo-orchestrator.md` only when you want a multi-skill GEO pass. It is still a stub coordinator, and no install path ships it.
 
 ## First-run teach cue
 
@@ -81,7 +111,7 @@ You used melted LibreGEO depth on Grok — not a Claude paste, not a fake agent 
 
 ## Smoke checklist
 
-- [ ] `llms-txt`, `citation-readiness`, and `schema-markup-geo` files exist at the install path you chose
+- [ ] `grok plugin list` shows `libre-geo-grok` (or the three skill files exist at the copy path you chose)
 - [ ] Grok can see those three skills
 - [ ] One llms.txt draft with a factual blockquote and absolute public URLs
 - [ ] One citation pass with severity-ranked claims and residual unverified items (no `/100` score)

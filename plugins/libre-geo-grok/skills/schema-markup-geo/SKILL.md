@@ -1,6 +1,6 @@
 ---
 name: schema-markup-geo
-description: Structured data guidance that helps discovery for GEO on Grok Build. Defensive / standards-based only.
+description: Structured data guidance that helps discovery for GEO on Grok Build. Defensive / standards-based only. Use when a page needs schema.org JSON-LD that matches what it shows, when auditing sameAs identity links, or when someone asks for ratings the page cannot back.
 ---
 
 # Schema Markup (GEO)
