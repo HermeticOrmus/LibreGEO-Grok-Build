@@ -7,15 +7,15 @@
 
 ## How to use this suite
 
-1. Install skills (see [QUICK_START.md](./QUICK_START.md)).
+1. Install the marketplace (see [QUICK_START.md](./QUICK_START.md)): the `libre-geo-grok` plugin plus the LibreGEO-Claude-Code plugins you need.
 2. Keep Reality OS as the global doctrine layer.
-3. Use suite skills for GEO work; use `AGENTS/geo-orchestrator.md` when a full pass is needed.
+3. Use suite skills for GEO work; use `stubs/agents/geo-orchestrator.md` (stub coordinator, not installed) when a full pass is needed.
 
 ## Agents in this repo
 
 | Agent | File | Role |
 |-------|------|------|
-| geo-orchestrator | `AGENTS/geo-orchestrator.md` | Coordinates audit, llms.txt, citation, schema, freshness into one GEO pass |
+| geo-orchestrator | `stubs/agents/geo-orchestrator.md` (stub; not installed) | Coordinates audit, llms.txt, citation, schema, freshness into one GEO pass |
 
 Project-level `AGENTS.md` in a consumer repo wins for project rules; this file is suite guidance.
 

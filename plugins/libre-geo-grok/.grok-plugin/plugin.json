@@ -1,0 +1,20 @@
+{
+  "name": "libre-geo-grok",
+  "version": "1.0.0",
+  "description": "Grok-native GEO skills with no score theater: llms-txt drafts or reviews /llms.txt, citation-readiness makes claims quotable and evidenced, schema-markup-geo writes honest schema.org JSON-LD.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreGEO-Grok-Build",
+  "repository": "https://github.com/HermeticOrmus/LibreGEO-Grok-Build",
+  "license": "MIT",
+  "keywords": [
+    "geo",
+    "ai-search",
+    "llms-txt",
+    "citation",
+    "schema-org",
+    "grok-build"
+  ]
+}

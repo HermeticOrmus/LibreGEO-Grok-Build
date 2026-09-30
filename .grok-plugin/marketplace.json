@@ -1,0 +1,29 @@
+{
+  "name": "libre-geo-grok",
+  "owner": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "metadata": {
+    "description": "The Grok Build edition of LibreGEO: the Grok-native libre-geo-grok plugin plus every LibreGEO-Claude-Code plugin, pinned by commit.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "libre-geo-grok",
+      "description": "Grok-native GEO skills with no score theater: llms-txt drafts or reviews /llms.txt, citation-readiness makes claims quotable and evidenced, schema-markup-geo writes honest schema.org JSON-LD.",
+      "version": "1.0.0",
+      "source": "./plugins/libre-geo-grok"
+    },
+    {
+      "name": "libre-geo",
+      "description": "GEO-first SEO for Claude Code: 12 skills that audit and improve how AI search engines (ChatGPT, Perplexity, Gemini, Claude, Google AI Overviews, Bing Copilot) crawl, understand, and cite a website, with Markdown and PDF client reports.",
+      "version": "1.0.0",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/HermeticOrmus/LibreGEO-Claude-Code.git",
+        "sha": "79e6aaac30f983c2f00caeec66cf1bf3b92ce756"
+      }
+    }
+  ]
+}
